@@ -6,3 +6,6 @@ lm(mpg ~ vehicle.length + vehicle.weight + spoiler.angle + ground.clearance + AW
 
 #summary:
 summary(lm(mpg ~ vehicle.length + vehicle.weight + spoiler.angle + ground.clearance + AWD,data=Mecha_table))
+
+# import suspension_coil.csv:
+MechaCar_Suspension <- read.csv(file='Suspension_Coil.csv',sep=",", header = T)
