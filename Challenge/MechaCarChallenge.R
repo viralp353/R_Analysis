@@ -9,3 +9,6 @@ summary(lm(mpg ~ vehicle.length + vehicle.weight + spoiler.angle + ground.cleara
 
 # import suspension_coil.csv:
 MechaCar_Suspension <- read.csv(file='Suspension_Coil.csv',sep=",", header = T)
+
+# summary statistics
+summarize <- MechaCar_Suspension %>% group_by(Manufacturing_Lot) %>% summarize(Mean_PSI=mean(PSI),Medium_PSI=median(PSI),Variance_PSI=var(PSI),Standard_PSI=sd(PSI))
