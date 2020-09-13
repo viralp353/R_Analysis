@@ -207,7 +207,7 @@ write a short description of a statistical study that can quantify how the Mecha
                                     F-statistic:  19.5 on 10 and 21 DF,  p-value: 1.898e-08
 
 
-                                            Based on Analysis, each Pr(>|t|) value represents the probability that each  coefficient contributes a random amount of variance to the linear model. According to our results, vehicle carb and disp (as well as intercept) are statistically unlikely to provide random amounts of variance to the linear model. In other words the vehicle carb and disp have a significant impact on on vehicale.. When an intercept is statistically significant, it means there are other variables and factors.
+                                            Based on Analysis, each Pr(>|t|) value represents the probability that each  coefficient contributes a random amount of variance to the linear model. According to our results, vehicle carb and disp (as well as intercept) are statistically unlikely to provide random amounts of variance to the linear model. In other words the vehicle carb and disp have a significant impact on on vehicale.
 
 
 
@@ -225,7 +225,7 @@ write a short description of a statistical study that can quantify how the Mecha
                                           mean of x 146.6875 
 
 
-                                          Based on own study's Analysis,Horse power is very important for car performce.based on test, Null hypothesis isn't rejected.
+                                          Based on own study's Analysis,Horse power is very important for car performce.
 
  
  
