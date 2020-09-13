@@ -21,7 +21,7 @@ ground.clearance               AWD
 
 (2)Is the slope of the linear model considered to be zero? Why or why not?
 
-*Based on Analysis, Slope isn't considered to be zero.
+*Based on Analysis, Slope isn't considered to be zero.because  R-square's value is  0.6825
 
 
 
@@ -57,7 +57,7 @@ F-statistic: 22.07 on 5 and 44 DF,  p-value: 5.35e-11
 
 #Suspension Coil Summary:
 
-
+ (1)determine if the suspension coil's pound-per-inch results are statistically different from the mean population results of 1,500 pounds per inch
 
  Manufacturing_Lot Mean_PSI Medium_PSI Variance_PSI Standard_PSI
   <chr>                <dbl>      <dbl>        <dbl>        <dbl>
@@ -69,92 +69,22 @@ F-statistic: 22.07 on 5 and 44 DF,  p-value: 5.35e-11
 *suspension coil summary statistics:
 
 
--> Based on summary, We got same value  for Lot1 & lot2  in mean around 1500.When  we saw  on variance in lot3.It had 220.
+-> Based on summary, We got same value  for Lot1 & lot2  in mean around 1500.When  we saw  on variance in lot3.It had 220.which is meet design specification.
 
 
 
 # Suspension Coil T-Test:
 
 
-* T-Test for lot1:
-
-    t.test(subset(Suspension,Manufacturing_Lot=="Lot1")$PSI,mu = 1500)
-    
-    	One Sample t-test
-    
-    data:  subset(Suspension, Manufacturing_Lot == "Lot1")$PSI
-    t = 0.12028, df = 49, p-value = 0.9048
-    alternative hypothesis: true mean is not equal to 1500
-    95 percent confidence interval:
-     1499.714 1500.322
-    sample estimates:
-    mean of x 
-     1500.018 
-     
-* T-Test for lot2:
-
-            t.test(subset(Suspension,Manufacturing_Lot=="Lot2")$PSI,mu =1500 
-            
-            	One Sample t-test
-            
-            data:  subset(Suspension, Manufacturing_Lot == "Lot2")$PSI
-            t = -0.95324, df = 49, p-value = 0.3451
-            alternative hypothesis: true mean is not equal to 1500
-            95 percent confidence interval:
-             1498.666 1500.476
-            sample estimates:
-            mean of x 
-             1499.571 
- 
- 
- 
- # T-test for lot3:
-     
-     
-     t.test(subset(Suspension,Manufacturing_Lot=="Lot3")$PSI,mu = 1500)
-    
-    	One Sample t-test
-    
-    data:  subset(Suspension, Manufacturing_Lot == "Lot3")$PSI
-    t = -0.47484, df = 49, p-value = 0.637
-    alternative hypothesis: true mean is not equal to 1500
-    95 percent confidence interval:
-     1494.789 1503.219
-    sample estimates:
-    mean of x 
-     1499.004 
- 
- 
- 
- 
- t.test(sample_table1$PSI, mu = 1500)
-
-	One Sample t-test
-
-data:  sample_table1$PSI
-t = -2.1528, df = 24, p-value = 0.0416
-alternative hypothesis: true mean is not equal to 1500
-95 percent confidence interval:
- 1490.227 1499.794
-sample estimates:
-mean of x 
- 1495.011 
- 
- > t.test(sample_table2$PSI, mu = 1500)
-
-	One Sample t-test
-
-data:  sample_table2$PSI
-t = 0.90725, df = 24, p-value = 0.3733
-alternative hypothesis: true mean is not equal to 1500
-95 percent confidence interval:
- 1497.504 1506.412
-sample estimates:
-mean of x 
- 1501.958 
+        Based on  T-test Analysis,Lot 1 had mean value 1500 and p value =0.9048.lot2 had mean value 1500 and p value = 0.3451 and Lot 3 had mean value 1499 and p-value:0.637.Assuming our significance level was the common 0.05 percent, our p-value is above our significance level. Therefore, we do not have sufficient evidence to reject the null hypothesis.
+        
+        #sample t-test:
+        When we can take sample test,The p-value is0.6633 which is  above the assumed significance level. Therefore, we would state that there is not enough evidence to reject the null hypothesis and we can confirm our two samples are not statistically different.
  
 #Design Your Own Study:
 
+
+Is horse important for car performance?
 
 (1)Think critically about what metrics you would think would be of interest to a consumer (cost, fuel efficiency, color options, etc.)
 - Based on consumer,I did take horsepower data for analysis.Because Horsepower is play important role for vehicle.In vehicle,speed is dependent on horse power.
@@ -207,6 +137,9 @@ mean of x
              121.9679 171.4071
             sample estimates:
             mean of x 146.6875 
+            
+            
+            Based on own study's Analysis,Horse power is very important for car performce.based on test, Null hypothesis isn't rejected.
 
  
  
