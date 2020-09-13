@@ -22,7 +22,6 @@ sample_table1 <- Suspension %>% sample_n(25)
 #generate another 50 randomly sampled data points:
 sample_table2 <-Suspension %>% sample_n(25)
 
-
 # T-Test for lot1:
 t.test(subset(Suspension,Manufacturing_Lot=="Lot1")$PSI,mu = 1500)
 # T-Test for lot2
