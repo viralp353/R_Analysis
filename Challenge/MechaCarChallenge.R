@@ -14,7 +14,7 @@ summary(lm(mpg ~ vehicle.length + vehicle.weight + spoiler.angle + ground.cleara
 Suspension<- read.csv(file='Suspension_Coil.csv',sep=",", header = T)
 
 # summary statistics
-summary <- Suspension %>% group_by(Manufacturing_Lot) %>% summarize(Mean_PSI=mean(PSI),Medium_PSI=median(PSI),Variance_PSI=var(PSI),Standard_PSI=sd(PSI))
+Suspension %>% group_by(Manufacturing_Lot) %>% summarize(Mean_PSI=mean(PSI),Medium_PSI=median(PSI),Variance_PSI=var(PSI),Standard_PSI=sd(PSI))
 
 #generate 50 randomly sampled data points:
 sample_table1 <- Suspension %>% sample_n(25)
@@ -27,7 +27,7 @@ sample_table2 <-Suspension %>% sample_n(25)
 t.test(subset(Suspension,Manufacturing_Lot=="Lot1")$PSI,mu = 1500)
 # T-Test for lot2
 t.test(subset(Suspension,Manufacturing_Lot=="Lot2")$PSI,mu = 1500)
-# T-test fot lot3
+# T-test for lot3
 t.test(subset(Suspension,Manufacturing_Lot=="Lot3")$PSI,mu = 1500)
 
 #compare means of two samples
@@ -63,3 +63,6 @@ Mean
 sample <-carsData %>% sample_n(12) 
 #check with T-test
 t.test(carsData$hp, mu =Mean,alternative = 'two.sided')
+
+
+
